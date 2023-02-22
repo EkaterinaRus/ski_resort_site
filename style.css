@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+/* header */
+
+.header {
+    background-image: url(image/main_foto_skier.png);
+    background-color: blue;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    padding: 29px 0 200px 0;
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.control-item {
+    margin-left: 23px;
+}
+
+.control-btn {
+    border: none;
+    display: block;
+    background-color: transparent;
+}
+
+.control-btn_search {
+    background-image: url(image/search_icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 47px;
+    height: 47px;
+}
+
+.control-btn_account {
+    background-image: url(image/account_icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 47px;
+    height: 47px;
+}
+
+.header-h1 {
+    max-width: 808px;
+    margin-top: 65px;
+    margin-left: 493px;
+    margin-bottom: 28px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+    color: #ffff;
+}
+
+.header-p {
+    max-width: 473px;
+    margin-left: 493px;
+    margin-bottom: 21px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #ffff;
+}
+
+/* .logo {
+    background-image: url(image/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 126px;
+    height: 53px;
+} */
+
+/* .search {
+    background-image: url(image/search_icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 45px;
+    height: 45px;
+} */
+
+/* .account {
+    background-image: url(image/account_icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 45px;
+    height: 45px;
+} */
+
+/* filter */
+
+.filter {
+    max-width: 1317px;
+    margin: 0 auto;
+    padding: 57px 30px 43px 30px;
+    border-radius: 21px;
+    background: #ffff;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-btn {
+    position: relative;
+    display: block;
+    /* width: 100%; */
+    text-align: left;
+
+    background: #ffff;
+    border: 3px solid #2A63A6;
+    border-radius: 11px;
+    /* height: 46px; */
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 30px;
+    padding-right: 106px;
+
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #2A63A6;
+
+    cursor: pointer;
+}
+
+.dropdown-btn::after {
+    content: "";
+
+}
+
+.btn {
+
+    background: #2A63A6;
+    border: 3px solid #2A63A6;
+    border-radius: 11px;
+    /* height: 46px; */
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    background: #2A63A6;
+    text-align: center;
+    padding-top: 41px;
+    padding-bottom: 41px;
+}
+
+.social-links a {
+    text-decoration: none;
+}
