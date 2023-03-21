@@ -9,11 +9,19 @@ searchBth.addEventListener('click', function (e) {
     searchInput.classList.add('active');
 });
 
-main.addEventListener('click', function (e) {
-    e.stopPropagation();
-    searchBox.classList.remove('active');
-    searchInput.classList.remove('active');
+
+document.addEventListener('click', function (e) {
+    if (e.target !== searchBox) {
+        searchBox.classList.remove('active');
+        searchInput.classList.remove('active');
+    }
 });
+
+// main.addEventListener('click', function (e) {
+//     e.stopPropagation();
+//     searchBox.classList.remove('active');
+//     searchInput.classList.remove('active');
+// });
 
 
 
