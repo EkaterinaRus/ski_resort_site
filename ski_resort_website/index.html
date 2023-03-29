@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script_filter.js"></script>
     <script defer src="js/script.js"></script>
+    <script defer src="js/script_overlay.js"></script>
     <title>Spoosk</title>
 </head>
 <body>
@@ -126,12 +127,131 @@
                             </div>
     
                             <div class="form-group">
-                                <button class="btn btn-blue">
+                                <button class="btn btn-blue container1" id="open-modal-btn">
                                     <img src="image/filter/btn_filter_icon.svg" width="24" height="24" alt="Расширенные фильтры">
                                 </button>
                             </div>
-                           
-
+                                <div class="modal" id="my-modal">
+                                    <div class="modal_box">
+                                        <button class="modal__close-btn" id="close-my-modal-btn">
+                                            <img class="close-image" src="image/overlay_filter/Vector.png" title="При закрытии фильтры сохраняются" width="14" height="14">
+                                        </button>
+                                            <h1 class="filters">Фильтры</h1>
+                                                <form action="overlayFilters" method="post">
+                                                    <div id="overlayFilters">
+                                                        <h2 class="filters-track">Трассы</h2>
+                                                            <div class="track-block">
+                                                                <div class="track-block-name1">
+                                                                    <div class="checkbox-name">
+                                                                        <input type="checkbox" class="custom-checkbox" id="easy" name="trails">
+                                                                        <label class="line-green label1" for="easy">Легкие</label>
+                                                                    </div>
+                                                                    <div class="checkbox-name">
+                                                                        <input type="checkbox" class="custom-checkbox" id="medium" name="trails">
+                                                                        <label class="line-blue label1" for="medium">Средней сложности</label>
+                                                                    </div>
+                                                                    <div class="checkbox-name">
+                                                                        <input type="checkbox" class="custom-checkbox" id="increased-complexity" name="trails">
+                                                                        <label class="line-orange label1" for="increased-complexity">Повышенной сложности</label>
+                                                                    </div>
+                                                                    <div class="checkbox-name">
+                                                                        <input type="checkbox" class="custom-checkbox" id="difficult" name="trails">
+                                                                        <label class="line-black label1" for="difficult">Сложные</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="track-block-name2">
+                                                                    <div class="checkbox-name">
+                                                                        <input type="checkbox" class="custom-checkbox" id="freeride" name="trails">
+                                                                        <label class="line-none label1" for="freeride">Фрирайд</label>
+                                                                    </div>
+                                                                    <div class="checkbox-name">
+                                                                        <input type="checkbox" class="custom-checkbox" id="snowpark" name="trails">
+                                                                        <label class="line-none label1" for="snowpark">Сноупарк</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        <h2 class="filters-lift">Подъемники</h2>
+                                                            <div class="lift-block">
+                                                                <div class="lift-block-name1">
+                                                                    <div class="checkbox-name">
+                                                                        <input type="checkbox" class="custom-checkbox" id="bygel" name="lifts">
+                                                                        <label class="lift-name label1" for="bygel">Бугельные</label>
+                                                                    </div>
+                                                                    <div class="checkbox-name">
+                                                                        <input type="checkbox" class="custom-checkbox" id="chairlifts" name="lifts">
+                                                                        <label class="lift-name label1" for="chairlifts">Кресельные</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="lift-block-name2">
+                                                                    <div class="checkbox-name">
+                                                                        <input type="checkbox" class="custom-checkbox" id="gandola" name="lifts">
+                                                                        <label class="lift-name label1" for="gandola">Гандолы</label>
+                                                                    </div>
+                                                                    <div class="checkbox-name">
+                                                                        <input type="checkbox" class="custom-checkbox" id="travelators" name="lifts">
+                                                                        <label class="lift-name label1" for="travelators">Детские травалаторы</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        <h2 class="filters-school">Горнолыжные школы/инструктора</h2>
+                                                            <div class="school-block">
+                                                                <div class="school-block-name1"> 
+                                                                    <div class="checkbox-name">
+                                                                        <input type="checkbox" class="custom-checkbox" id="adults" name="school">
+                                                                        <label class="school-name label1" for="adults">Для взрослых</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="school-block-name2">
+                                                                    <div class="checkbox-name">
+                                                                        <input type="checkbox" class="custom-checkbox" id="children" name="school">
+                                                                        <label class="school-name label1" for="children">Для детей</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        <div class="filters-distance-block">
+                                                            <h2 class="filters-distance">Расстояние от ближайшего аэропорта</h2>
+                                                                <div class="slider-box">
+                                                                    <input type="range" step="100" min="0" max="200" value="200" list="rangeList" class="slider">
+                                                                </div>
+                                                                    <div class="slider-box-name">
+                                                                        <div class="slider-name">Не более 50 км</div>
+                                                                        <div class="slider-name">Не более 100 км</div>
+                                                                        <div class="slider-name">Не важно</div>
+                                                                    </div>
+                                                        </div>
+                                                        <div>
+                                                            <h2 class="filters-additional">Дополнительно</h2>
+                                                                <div class="filters-additional-block">
+                                                                    <div class="additional-block1">
+                                                                        <div>
+                                                                            <input type="checkbox" class="custom-checkbox2" id="rent">
+                                                                            <label for="rent" class="additional-name label2">Прокат оборудования</label> 
+                                                                        </div>
+                                                                        <div>
+                                                                            <input type="checkbox" class="custom-checkbox2" id="skipass">
+                                                                            <label for="skipass" class="additional-name label2">Сезонный ски-пасс</label> 
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="additional-block2">
+                                                                        <div>
+                                                                            <input type="checkbox" class="custom-checkbox2" id="skating">
+                                                                            <label for="skating" class="additional-name label2">Вечернее катание</label> 
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="button-block">
+                                                            <div class="button-block1">
+                                                                <button class="button-clear" type="reset" >Очистить</button>
+                                                            </div>
+                                                            <div class="button-block2">
+                                                                <button class="button-pickup" type="submit">Подобрать</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>       
+                                    </div>
+                                </div>
                             <div class="form-group">
                                 <button class="btn btn-blue">
                                     <img src="image/filter/btn_map_icon.svg" width="24" height="24"  alt="Карта">
