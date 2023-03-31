@@ -254,32 +254,79 @@ body {
     transition: all 0.2s;
 }
 
-.search-box .search-input {
-    height: 100%;
-    width: 100%;
-    border: none;
-    background: white;
-    font-size: 16px;
-    border-radius: 28px;
-    padding: 0;
-    outline: none;
-    opacity: 0;
-    transition: all 0.2s;
-} */
-
-.menu-item .search-input {
-    display: none;
-    height: 100%;
-    width: 100%;
-    border: none;
-    background: white;
-    font-size: 16px;
-    border-radius: 28px;
-    padding: 0;
-    outline: none;
-    opacity: 0;
-    transition: all 0.2s;
+.search-box.active {
+    width: 740px;
+    height: 55px;
+    transition: all 0.5s;
 }
+*/
+
+.search-box {
+    position: relative;
+    width: 776px;
+    height: 55px;
+} 
+
+.search-box .search-btn {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.search-active {
+    opacity: 1;
+    display: none;
+    display: flex;
+    height: 100%;
+    align-items: center;
+} 
+
+.search-active .search-input {
+    opacity: 0;
+
+    height: 100%;
+    width: 740px;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    border-radius: 12px;
+    padding: 13.5px 0px 13.5px 10px;
+    outline: none;
+    transition: all 0.5s;
+}
+
+.search-active .search-input.active {
+    opacity: 1;
+
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    border-radius: 12px;
+    padding: 0 20px 0 20px;
+    outline: none;
+    transition: all 0.5s;
+}
+
+.search-active .cancel-btn {
+    opacity: 0;
+    margin-left: 12px;
+    cursor: pointer;    
+}
+
+.search-active .cancel-btn.active {
+    opacity: 1;
+    margin-left: 12px; 
+    cursor: pointer;   
+}
+
+
 
 /* 
 .search-box .search-input.active {
@@ -1084,6 +1131,7 @@ body {
 /*-------------------- Cards--------------------------- */
 
 .cards-wrapper {
+    position: relative;
     max-width: 1141px;
     margin: 0 auto;
     padding-left: 10px;
@@ -1289,11 +1337,17 @@ body {
     background-color: #005FF9;
     border: none;
 
-
-    line-height: 19px;
-    color: #FFFFFF;
     text-align: center;
     text-decoration: none;
+    /* font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    color: #FFFFFF; */
+}
+
+.cards-btn-blue a {
+    line-height: 19px;
+    color: #FFFFFF;
     font-size: 16px;
     font-weight: 600;
 }
@@ -1411,22 +1465,33 @@ body {
     margin: 0px 9px 0px 0px;
 }
 
-.rating-skier, .rating-lift, .rating-montains{
+.rating {
     display: flex;
-    align-items: end;
+    align-items: center;
+}
+
+.rating img{
+    margin-right: 8px;
+}
+
+.rating div span {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 600;
+    color: #444444;
 }
 
 
-.rating-montains {
+/* .rating-montains {
 }
 .rating-skier {
 }
 .rating-lift {
-}
+} */
 .review-text {
     max-width: 465px;
     margin-top: 14px;
-    margin-bottom: 16px;
+    margin-bottom: 35px;
 }
 .review-title {
     font-size: 20px;
@@ -1440,6 +1505,7 @@ body {
 }
 
 .btn-reviews {
+    display: none;
     margin-left: 350px;
     margin-right: 24px;  
     font-size: 16px;
@@ -1464,6 +1530,17 @@ body {
     cursor: pointer;
 }
 
+.up { 
+    position: absolute;
+    bottom: -94px;
+    right: 10px;
+
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+
+    color: #005FF9;
+}
 
 /* -----FOOTER------------------------------------------------------- */
 
@@ -1473,6 +1550,18 @@ body {
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
+
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 400;
+}
+
+.pp { 
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+
+    color: #fff;
 }
 
 /* .social-links a {
