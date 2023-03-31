@@ -612,6 +612,73 @@ body {
 
 /*--------------------Overlay------------------------- */
 
+.modal-comparison {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, .3);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    visibility: hidden;
+    opacity: 0;
+    transform: opasity .4s visibility .4s;
+}
+
+.modal-comparison_box {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 850px;
+    margin-top: -570px;
+    z-index: 2;
+    width: 392px;
+    height: 148px;
+    border-radius: 0 0 32px 32px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .4);
+    background-color: #fff;
+    transform: scale(0);
+    transition: transform .8s;
+    padding: 40px 32px;
+    gap: 9px;
+}
+
+.modal-comparison.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-comparison .modal-comparison_box {
+    transform: scale(1);
+}
+
+.modal-comparison-text {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0042AD;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    
+}
+
+.modal-comparison-block {
+    width: 328px;
+    height: 38px;
+    text-align: center;
+    padding-left: 29px;
+    padding-right: 29px;
+}
+
 .modal {
     position: fixed;
     top: 0;

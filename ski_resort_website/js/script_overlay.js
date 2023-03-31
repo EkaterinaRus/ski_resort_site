@@ -1,3 +1,17 @@
+// Открыть модальное окно сравнения
+document.getElementById("open-modal-comparison-btn").addEventListener("click", function() {
+    document.getElementById("my-modal-comparison").classList.add("open")
+})
+
+// Закрыть модальное окно сравнения при клике вне его
+document.querySelector("#my-modal-comparison .modal-comparison_box").addEventListener('click', event => {
+    event._isClickWithInModal = true;
+});
+document.getElementById("my-modal-comparison").addEventListener('click', event => {
+    if (event._isClickWithInModal) return;
+    event.currentTarget.classList.remove('open');
+});
+
 // Открыть модальное окно
 document.getElementById("open-modal-btn").addEventListener("click", function() {
     document.getElementById("my-modal").classList.add("open")
