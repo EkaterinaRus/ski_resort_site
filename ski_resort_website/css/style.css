@@ -67,7 +67,7 @@ body {
     font-weight: 400;
 }
 
-/* ---------------------------------------------------------------------------- */
+/* --------BASE------------------------------------------------------------------ */
 
 .container {
     min-height: 100%;
@@ -112,7 +112,6 @@ body {
 
 .header-wrapper {
     display: flex;
-    /* min-height: 100px; */
     justify-content: space-between;
     align-items: center;
 }
@@ -126,7 +125,6 @@ body {
 .menu-list {
     display: flex;
     flex-wrap: wrap;
-    /* min-width: 326px; */
     justify-content: space-between;
 }
 
@@ -159,7 +157,7 @@ body {
     position: relative;
 }
 
-.page-form {
+.page-basic-info{
     margin: -81px 0px 0px 0px;
 }
 
