@@ -1545,3 +1545,70 @@ body {
 /* .social-links a {
     text-decoration: none;
 } */
+
+
+/*------------Filter page --------------------------------------------*/
+
+.header_filters {
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 12px; 
+    padding-bottom: 12px; 
+    z-index: 50;
+}
+
+.name2 {
+    color: #005FF9;
+}
+
+.page_filters-banner {
+    position: relative;
+    padding: 150px 0 115px 0;
+}
+
+.btn-blue2 {
+    background: #005FF9;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 34px;
+    padding-right: 34px;
+}
+
+.btn-result2 {
+    min-width: 307px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 55.5px;
+    padding-right: 55.5px;
+    background-color: #FAA800;
+    color: #ffff;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.section-title2 {
+    margin-bottom: 40px;
+    color: #0042AD;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+.image2 {
+    border-radius: 32px 32px 0 0;
+}
+
+.button-up {
+    margin: 213px 186px 141px 1130px;
+    border: none;
+    background: #FFFFFF;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #005FF9;
+    cursor: pointer;
+}
