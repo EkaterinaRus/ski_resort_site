@@ -110,6 +110,12 @@ body {
     z-index: 50;
 }
 
+.header-white {
+
+    background-color: #fff;
+
+}
+
 .header-wrapper {
     display: flex;
     justify-content: space-between;
@@ -142,6 +148,10 @@ body {
     font-weight: 500;
 }
 
+.menu-link-blue {
+    color: #005FF9;
+}
+
 .menu-link img {
     text-align: center;
     margin: 0 31px 8px 31px;
@@ -157,7 +167,7 @@ body {
     position: relative;
 }
 
-.page-basic-info{
+.page-form {
     margin: -81px 0px 0px 0px;
 }
 
@@ -1228,7 +1238,8 @@ body {
 
 .card-image {
     position: relative;
-    width: 100%;
+    width: 348px;
+    height: 240px;
 }
 
 .card-title {
@@ -1252,8 +1263,19 @@ body {
     color: #FFFFFF;
 }
 
+/* .card-image-shadow {
+    border-radius: 32px 32px 0 0;
+    box-shadow: inset rgba(42, 99, 166, 0.85) 6px -67px 60px,
+    rgba(0, 97, 211, 0.1) 1px 224px 10px ;
+} */
+
 .image {
     width: 100%;
+    height: 100%;
+    border-radius: 32px 32px 0 0;
+    object-fit: cover;
+    /* position: relative;
+    z-index: -1; */
 }
 
 .card-rating {
@@ -1363,6 +1385,11 @@ body {
     border-radius: 8px;
     user-select: none; 
     cursor: pointer;
+
+    line-height: 19px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .cards-btn:focus {
@@ -1416,12 +1443,12 @@ body {
     color: #FFFFFF; */
 }
 
-.cards-btn-blue a {
+/* .form-button a {
     line-height: 19px;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 600;
-}
+} */
 
 .cards-btn-blue:hover {
     opacity: 0.7;
@@ -1646,22 +1673,13 @@ body {
 
 /*------------Filter page --------------------------------------------*/
 
-.header_filters {
-    width: 100%;
-    left: 0;
-    top: 0;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    z-index: 50;
-}
-
-.name2 {
-    color: #005FF9;
-}
 
 .page_filters-banner {
-    position: relative;
-    padding: 150px 0 115px 0;
+    height: 365px;
+}
+
+.img-filters-banner {
+    padding-top: 100px;
 }
 
 .btn-blue2 {
@@ -1693,12 +1711,8 @@ body {
     font-weight: 700;
 }
 
-.image2 {
-    border-radius: 32px 32px 0 0;
-}
-
 .button-up {
-    margin: 213px 186px 141px 1130px;
+    margin: 94px 186px 94px 1130px;
     border: none;
     background: #FFFFFF;
     font-family: 'Raleway';
