@@ -1,168 +1,9 @@
-@font-face {
-    src: url('../fonts/Raleway-Regular.ttf');
-    font-family: 'Raleway';
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    src: url('../fonts/Raleway-Medium.ttf');
-    font-family: 'Raleway';
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    src: url('../fonts/Raleway-SemiBold.ttf');
-    font-family: 'Raleway';
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face {
-    src: url('../fonts/Raleway-Bold.ttf');
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-style: normal;
-}
-
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-    outline: none;
-}
-
-ul,
-ol,
-li {
-    list-style: none;
-}
-
-img {
-    vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: inherit;
-    font-size: inherit;
-}
-
-html,
-body {
-    height: 100%;
-    font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
-    font-feature-settings: "lnum";
-    color: #000;
-    font-size: 16px;
-    font-weight: 400;
-}
-
-/* ----------BASE------------------------------------------------------------------ */
-
-.container {
-    min-height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.wrapper {
-    max-width: 1232px;
-    margin: 0 auto;
-    /* padding: 0 10px; */
-}
-
-._img {
-    position: relative;
-}
-
-._img img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-
-}
-
 .content {
     text-align: center;
 }
-
-/* ------HEADER---------------------------------------------------------------- */
-
-.header {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-
-    padding-top: 12px;
-    padding-bottom: 12px;
-
-    background-color: #fff;
-
-    z-index: 50;
-}
-
-.header-wrapper {
-    display: flex;
-    /* min-height: 100px; */
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header-menu {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 8px 8px 8px;
-}
-
-.menu-list {
-    display: flex;
-    flex-wrap: wrap;
-    /* min-width: 326px; */
-    justify-content: space-between;
-}
-
-.menu-item {
-    text-align: center;
-}
-
-.menu-item:not(:last-child) {
-    margin: 0px 20px 0px 0px;
-}
-
-.menu-link {
-    color: #005FF9;
-    line-height: 19px;
-    font-weight: 500;
-}
-
-.menu-link img {
-    text-align: center;
-    margin: 0 31px 8px 31px;
-}
-
-
 /* --------PAGE-------------------------------------------------- */
-.page {
-    flex: 1 1 auto;
-}
 
-.page-banner {
-    position: relative;
+.page_resorts-banner {
     height: 570px;
 }
 
@@ -179,16 +20,6 @@ body {
     padding-bottom: 200px;
 }
 
-/* --------BANNER-------------------------------------------------- */
-
-.banner-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-
-}
 
 /*-----BASIC-INFO----------------------------------------- */
 
@@ -651,24 +482,4 @@ body {
     box-shadow: 0px 1px 10px #F5F5F7;
 }
 
-/* -----FOOTER------------------------------------------------------- */
 
-.footer {
-    width: 100%;
-    background: #005FF9;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-    font-size: 10px;
-    line-height: 12px;
-    font-weight: 400;
-}
-
-.pp { 
-    position: absolute;
-    bottom: 0px;
-    right: 10px;
-
-    color: #fff;
-}
